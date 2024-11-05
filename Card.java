@@ -46,13 +46,13 @@ public class Card
       String suit = "";
    
       if ((cardNum / 13) == 0) //If the card is a Diamond
-         suit = "DIAMOND";
+         suit = "Diamonds";
       else if((cardNum / 13) == 1) //If card is a Heart
-         suit = "HEART";
+         suit = "Hearts ";
       else if((cardNum / 13) == 2) //If card is a Spade
-         suit = "SPADE";
+         suit = "Spades";
       else if((cardNum / 13) == 3) //If card is a Club
-         suit = "CLUB";
+         suit = "Clubs";
       else
          System.out.println("INVALID CARD: " + cardNum);
    
@@ -94,18 +94,18 @@ public class Card
       if (value >= 10 || value == 0)
       {
          if (value == 12)
-            name = "king";
+            name = "King of ";
          else if (value == 11)
-            name = "queen";
+            name = "Queen of ";
          else if (value == 10)
-            name = "jack";
+            name = "Jack of ";
          else if (value == 0)
-            name = "ace";
+            name = "Ace of ";
       
          return name + suit;
       }
       else
-         return "" + (value + 1) + suit; 
+         return "" + (value + 1) + " of "+suit; 
    
    }
 

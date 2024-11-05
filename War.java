@@ -36,17 +36,19 @@ public class War
       //Playing the Game
          Card p1Card = player1.playCard();
          Card p2Card = player2.playCard();
-      
+         System.out.println("Player 1 places " + p1Card.toString());
+         System.out.println("Player 2 places "+ p2Card.toString());
+
          if (p1Card.compare(p2Card) == 1) //if player1 wins
          {
-            System.out.println("Player 1 Wins!");
+            System.out.println("Player 1 Wins!\n");
             player1.addCard(p1Card);
             player1.addCard(p2Card);
          }
          
          else if (p1Card.compare(p2Card) == -1) //if player2 wins
          {
-            System.out.println("Player 2 Wins!");
+            System.out.println("Player 2 Wins!\n");
             player2.addCard(p1Card);
             player2.addCard(p2Card);
          }
@@ -66,9 +68,9 @@ public class War
    
    //Declaring the Winner
       if(player2.numCards() == 0)
-         System.out.println("PLAYER 1 WINS THE GAME!!!");
+         System.out.println("\nPLAYER 1 WINS THE GAME!!!");
       else
-         System.out.println("PLAYER 2 WINS THE GAME!!!");
+         System.out.println("\nPLAYER 2 WINS THE GAME!!!");
    
    
    
@@ -78,7 +80,7 @@ public class War
 //post: plays war when two cards are equal
    public static void war(Hand player1, Hand player2)
    {
-      System.out.println("WAR!!!");
+      System.out.println("\nWAR!!!\n");
    
    //Playing 3 Cards Facedown
       Card p1Card1 = player1.playCard();
